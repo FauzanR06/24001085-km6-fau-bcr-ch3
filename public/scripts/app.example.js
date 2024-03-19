@@ -76,6 +76,7 @@ class App {
   }
 
   async load() {
+    // mengambil data api dari sini
     const cars = await Binar.listCars();
     Car.init(cars);
   }
