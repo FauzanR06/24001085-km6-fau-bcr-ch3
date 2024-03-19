@@ -1,0 +1,35 @@
+* {
+  font-family: Helvetica;
+}
+
+#header {
+  background-color: #f1f3ff;
+}
+
+#hero .row {
+  text-align: justify;
+}
+#testimonial #title {
+  text-align: center;
+}
+
+#testimonial #carousel {
+  max-width: 800px;
+  background-color: #f1f3ff;
+  border-radius: 10px;
+}
+
+#cta-banner #jumbotron {
+  background-color: #0d28a6;
+  border-radius: 10px;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  #why-us #title {
+    text-align: center;
+  }
+  #testimonial #carousel {
+    text-align: center;
+  }
+}

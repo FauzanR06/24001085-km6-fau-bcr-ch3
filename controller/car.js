@@ -124,13 +124,13 @@ exports.createCar = (req, res, next) => {
       message: "year must be filled",
     });
   }
-  if (options.length == 0) {
+  if (!options || options == "") {
     return next({
       statusCode: 400,
       message: "options must be filled",
     });
   }
-  if (specs.length == 0) {
+  if (!specs || specs == "") {
     return next({
       statusCode: 400,
       message: "specs must be filled",
@@ -236,20 +236,20 @@ exports.updateCar = (req, res, next) => {
       message: "year must be filled",
     });
   }
-  if (options.length == 0) {
+  if (!options || options == "") {
     return next({
       statusCode: 400,
       message: "options must be filled",
     });
   }
-  if (specs.length == 0) {
+  if (!specs || specs == "") {
     return next({
       statusCode: 400,
       message: "specs must be filled",
     });
   }
 
-  const id = parseInt(req?.params?.id);
+  const id = req?.params?.id;
   const updatedCar = {
     id: id,
     ...req.body,
@@ -264,7 +264,7 @@ exports.updateCar = (req, res, next) => {
 };
 
 exports.deleteCar = (req, res) => {
-  const id = parseInt(req?.params?.id);
+  const id = req?.params?.id;
 
   const data = carUsecase.deleteCar(id);
 

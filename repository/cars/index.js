@@ -2,9 +2,7 @@ const cars = require("../../data/cars.json");
 const { v4: uuidv4 } = require("uuid");
 
 exports.listCars = () => {
-  let data = cars.map((car) => car);
-
-  return data;
+  return cars.map((car) => car);
 };
 
 exports.detailCar = (id) => {
@@ -29,17 +27,16 @@ exports.createCar = (payload) => {
 };
 
 exports.updateCar = (id, payload) => {
-  updatedCarIndex = 0;
+  updatedCarsIndex = 0;
 
-  // Update the data by id
   cars.map((car, index) => {
     if (car?.id == id) {
       cars[index] = payload;
-      updatedCarIndex = index;
+      updatedCarsIndex = index;
     }
   });
 
-  return cars[updatedCarIndex];
+  return cars[updatedCarsIndex];
 };
 
 exports.deleteCar = (id) => {

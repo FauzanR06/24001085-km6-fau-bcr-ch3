@@ -19,20 +19,6 @@ app.use("*", (req, res) => {
   });
 });
 
-// app.use("/", (req, res) => {
-//   const { name, city, province } = req.query;
-//   let data = students.map((student) => student);
-//   // call the usecase
-//   // const data = studentUsecase.getStudents(name, city, province);
-
-//   const response = {
-//     data,
-//     message: null,
-//   };
-
-//   res.status(200).json(response);
-// });
-
 // Error middleware
 app.use((err, req, res, next) => {
   let statusCode = 500;

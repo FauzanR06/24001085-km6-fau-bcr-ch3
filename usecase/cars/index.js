@@ -1,8 +1,7 @@
 const carRepository = require("../../repository/cars");
 
 exports.listCars = () => {
-  const data = carRepository.listCars();
-  return data;
+  return carRepository.listCars();
 };
 
 exports.detailCar = (id) => {
